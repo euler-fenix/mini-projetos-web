@@ -1,0 +1,122 @@
+/* cores usando variaveis CSS */
+:root {
+    --cor-fundo: #f0f8ff;
+    --cor-primaria: #007BFF;
+    --cor-secundaria: #0056b3;
+    --cor-texto: #333;
+    --cor-texto-secundario: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header, footer {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 2vh 0;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid var(--cor-texto-secundario);
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2vh 0;
+}
+
+h1, h2 {
+    margin: 0 0 1em 0;
+}
+
+p {
+    margin: 0 0 1em 0;
+    line-height: 1.5;
+}
+
+details summary {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+details summary:focus {
+    outline: none;
+}
+
+details[open] summary {
+    background-color: var(--cor-secundaria);
+}
+
+pre {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: left;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+/*texto para telas menores */
+@media (max-width: 600px) {
+    body {
+        font-size: 4vw;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+}
+
+/*texto para telas maiores */
+@media (min-width: 601px) {
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
