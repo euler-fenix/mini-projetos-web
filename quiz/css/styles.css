@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a8dadc, #457b9d); /* Gradiente teal p/ azul */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* sombra acentuada */
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #3498db; /* botoes */
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+button:hover {
+    background-color: #2980b9; /* escuro no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+button.correct {
+    background-color: #90ee90; /* resposta correta */
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+}
+
+button.wrong {
+    background-color: #ff6347; /* resposta errada */
+    color: white;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+}
+
+#reload {
+    background-color: #77dd77; /* Proxima Pergunta */
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* sombra */
+}
+
+#reload:hover {
+    background-color: #66cc66; /* Verde no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* destaca Sombra */
+}
+
+#statusAnswer {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333333;
+}
+
+#statusAnswer.acertou {
+    color: #77dd77; /* mensagens de acerto */
+}
+
+#statusAnswer.errou {
+    color: #ff6347; /* mensagens de erro */
+}
+
+/* Rodape */
+.rodape {
+    background-color: #007BFF; 
+    color: white; /* Contraste claro */
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve emcima do rodape */
+}
+
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+    .quiz-container {
+        width: 90%;
+    }
+}
