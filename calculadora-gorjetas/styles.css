@@ -1,0 +1,150 @@
+/* Configuraçao gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+}
+
+/* Centraliza conteudo */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Titulos */
+h1 {
+    color: #2a9d8f; 
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #264653; 
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #e76f51; 
+    margin-bottom: 20px;
+}
+
+/* Pargrafos */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+p#resultado {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Destaque para pontos */
+.servico-container-vertical {
+    display: flex;
+    flex-direction: column; /* Alinha vertical */
+    align-items: flex-start; /* Alinha esquerda */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    text-align: left;
+}
+
+p.servico {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+}
+
+p.servico span.ponto {
+    font-size: 1.5em; /* Destacar pontos */
+    color: #264653; 
+    font-weight: bold;
+    margin-right: 10px; /* Espaço ponto e o texto */
+}
+
+/* Entrada de texto */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #2a9d8f; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(42, 157, 143, 0.5);
+}
+
+/* Botão */
+button {
+    background-color: #2a9d8f; 
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #1f776e; 
+    transform: translateY(-2px);
+}
+
+/* Mensagens de resultado */
+#mensagemAgradecimento, #mensagemVolteSempre {
+    font-weight: bold;
+    margin-top: 15px;
+    color: green; 
+}
+
+#mensagemVolteSempre {
+    color: blue; 
+}
+
+/* Rodapé */
+.rodape {
+    text-align: center;
+    background-color: #0a93ee; 
+    color: #fff; /* Texto branco */
+    padding: 15px 0;
+    position: fixed;
+    margin-top: 20px;
+    font-size: 0.9em;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+}

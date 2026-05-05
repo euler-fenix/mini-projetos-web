@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gorjetas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Restaurante False</h1>
+        <h2>Seja bem vindo !</h2>
+        <h3>Calculadora de Gorjetas</h3>
+        <p>Insira o valor total da sua conta no campo abaixo e escolha a qualidade do serviço</p>
+        
+        <!-- Alinhamento -->
+        <div class="servico-container-vertical">
+            <p class="servico">
+                <span class="ponto">•</span> Bom – Para serviços que superaram suas expectativas.
+            </p>
+            <p class="servico">
+                <span class="ponto">•</span> Regular – Para serviços adequados, mas sem novidades.
+            </p>
+            <p class="servico">
+                <span class="ponto">•</span> Ruim – Para serviços abaixo do esperado.
+            </p>
+        </div>
+
+        <label for="valorConta">Valor Total da Conta (R$):</label>
+        <input type="number" id="valorConta" placeholder="Digite o valor da conta">
+        
+        <label for="qualidadeServico">Qualidade do Serviço:</label>
+        <select id="qualidadeServico">
+            <option value="0.15">Bom (15%)</option>
+            <option value="0.08">Regular (8%)</option>
+            <option value="0.02">Ruim (2%)</option>
+        </select>
+        
+        <button id="calcularBtn">Calcular Gorjeta</button>
+        <p id="resultado"></p>
+        <!-- Mensagens -->
+        <p id="mensagemAgradecimento">Obrigado pela preferência!</p>
+        <p id="mensagemVolteSempre">Volte sempre!</p>
+    </div>
+
+    <footer class="rodape">
+        &copy; 2024 Fenix App. Todos os direitos reservados.
+    </footer>
+
+        <script src="script.js"></script>
+</body>
+</html>
