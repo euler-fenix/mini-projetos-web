@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Contatos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Contatos</h1>
+    </header>
+
+    <div id="form-container">
+        <h2><strong>Adicionar novo contato</strong></h2>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="text" id="phone" name="phone" placeholder="(xx) xxxx-xxxx" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <button type="submit">Salvar contato</button>
+        </form>
+        <p id="message" class="hidden"></p>
+    </div>
+
+    <div id="contact-list">
+        <h2><strong>Lista de contatos</strong></h2>
+        <ul id="contacts"></ul>
+    </div>
+
+    <footer class="rodape">
+        &copy; 2025 Fenix App. Todos os direitos reservados.
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
