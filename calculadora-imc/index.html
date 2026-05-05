@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function calcularIMC() {
+            const peso = parseFloat(document.getElementById("peso").value.replace(",", "."));
+            const altura = parseFloat(document.getElementById("altura").value.replace(",", "."));
+
+            if (!peso || !altura || peso <= 0 || altura <= 0) {
+                document.getElementById("resultado").innerText = "Por favor, insira valores válidos para peso e altura!";
+                return;
+            }
+
+            const imc = peso / (altura * altura);
+            document.getElementById("resultado").innerText = `Seu IMC é: ${imc.toFixed(2)}`;
+        }
+
+        function formatarInput(id) {
+            const input = document.getElementById(id);
+            let valor = parseFloat(input.value.replace(",", "."));
+
+            if (!isNaN(valor)) {
+                //passar p/ 2 casas decimais
+                valor = valor.toFixed(2);
+                input.value = valor.replace(".", ",");
+            } else {
+                input.value = ""; // Limpa campo invalido
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <h2>Índice de Massa Corporal</h2>
+        <h3>Informe seus dados:</h3>
+        
+        <label for="peso">Peso (kg):</label>
+        <input type="text" id="peso" placeholder="Digite seu peso" onblur="formatarInput('peso')">
+        
+        <label for="altura">Altura (m):</label>
+        <input type="text" id="altura" placeholder="Digite sua altura" onblur="formatarInput('altura')">
+        
+        <button onclick="calcularIMC()">Calcular IMC</button>
+        <p id="resultado"></p>
+    </div>
+<footer class="rodape">
+    &copy; 2024 Fenix. Todos os direitos reservados.
+</footer>
+</body>
+</html>
