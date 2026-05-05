@@ -1,0 +1,160 @@
+/* Reset de estilos padrões */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Fundo */
+    padding: 0;
+    margin: 0;
+    padding-bottom: 60px; /* Espaço p rodape fixo */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* sombra bordas */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Mensagem  */
+.mensagem {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    background-color: #eafbe4;
+    color: #4CAF50;
+    border-radius: 5px;
+    display: none; /* Escondido */
+    text-align: center;
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* classificaçoa */
+#classificar-opcoes {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+#classificar-opcoes button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#classificar-opcoes button:hover {
+    background-color: #0056b3;
+}
+
+#livros-lista {
+    margin-top: 30px; /* Espaço entre  titulo e  lista de livros */
+}
+
+.livro {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* sombra aos livros */
+}
+
+.livro h3 {
+    margin: 0;
+    color: #333;
+}
+
+.livro p {
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Rodape */
+.rodape {
+    background-color: #0056b3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Media Queries para responsividade */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    input,
+    button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    .livro {
+        box-shadow: none; /* Sombra menor dispositivos peq */
+    }
+}
