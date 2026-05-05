@@ -1,0 +1,157 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* corpo da pag */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Conteiner principal */
+.app-container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Cabeçalho */
+header h1 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* mensagens */
+.mensagem-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    font-size: 14px;
+    color: #d9534f; /* mensagesn de erro */
+    visibility: hidden; /* Oculta a mensagem  */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* mensagem */
+.mensagem.visivel {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* input */
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#notaInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#adicionarNotaBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#adicionarNotaBtn:hover {
+    background-color: #45a049;
+}
+
+/* Lista notas */
+.notas-section ul {
+    list-style: none;
+}
+
+.notas-section li {
+    word-wrap: break-word;
+    word-break: break-word;
+    background-color: #fafafa;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row; /* Texto e iconelixeira na mesma linha */
+    justify-content: space-between; /* Separação do texto e lixeira */
+    align-items: center; /* Centraliza lixeira verticalmente */
+    border: 2px solid #d1e8e2; /* Bordas suaves */
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra tridimensional */
+}
+
+.notas-section li span {
+    flex: 1;
+}
+
+.notas-section li .fa-trash {
+    color: #e74c3c; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.notas-section li .fa-trash:hover {
+    color: #c0392b; 
+    transform: scale(1.1); /* Efeito de aumento ao passar  mouse */
+}
+
+/* Rodape*/
+.rodape {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .app-container {
+        width: 90%;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    #notaInput {
+        font-size: 14px;
+    }
+
+    #adicionarNotaBtn {
+        font-size: 14px;
+    }
+
+    .notas-section li {
+        font-size: 14px;
+    }
+}
